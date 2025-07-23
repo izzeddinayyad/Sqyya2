@@ -1,0 +1,160 @@
+/* General */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  body{
+    font-family: "Cairo", sans-serif;
+
+  }
+  .flex {
+    display: flex;
+  }
+
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .login-content {
+    margin-top: 70px;
+    max-height: 850px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .image-section {
+    width: 50%;
+  }
+  .image-section img {
+    width: 100%;
+  }
+  .form-section {
+    flex-direction: column;
+    padding-top: 80px;
+    margin: 0 auto;
+    direction: rtl;
+  }
+  .form-section h2 {
+    font-size: 28px;
+    color: black;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 500;
+  }
+  
+  .form-section div {
+    margin: 30px 0;
+  }
+  .form-section form label {
+    display: block;
+    text-align: right;
+    margin-bottom: 20px;
+    font-size: 22px;
+  }
+  .form-section form input {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 12px 15px 12px 170px;
+    width: 100%;
+    transition: border 0.3s ease;
+    font-size: 16px;
+    transition: all 0.4s;
+    font-size: 22px;
+  }
+  
+  .form-section form button {
+    width: 100%;
+    background-color: blueviolet;
+    color: aliceblue;
+    font-size: 20px;
+    padding: 12px;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .toRigesterSection {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .toRigesterSection span {
+    font-size: 18px;
+  }
+  
+  .form-section div span a {
+    color: red;
+    margin-right: 5px;
+    display: inline;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  .error-message {
+    color: #D63031;
+    font-size: 14px;
+    display: none;
+    margin-top: 5px;
+}
+input.error {
+    border-color: #D63031 !important;
+}
+input.success {
+    border-color: #00B894!important;
+}
+  .form-section form input:focus {
+    outline: none;
+    border-color: blueviolet;
+  }
+  
+  .form-section form button:hover {
+    background-color: rgb(14, 184, 14);
+    transition: background-color 0.3s ease;
+  }
+  .input-container input:focus {
+    border-color: blueviolet;
+    box-shadow: 0 0 0 2px rgba(138, 43, 226, 0.2);
+    outline: none;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      width: 100%;
+      padding: 0px 15px;
+    }
+    .login-content {
+      flex-direction: column;
+      overflow: visible;
+      min-height: 900px;
+      margin-top: 30px;
+      border-radius: 0;
+    }
+    .form-section h2 {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .image-section,
+    .form-section {
+      width: 100%;
+      border-radius: 0;
+    }
+  
+    .image-section img {
+      border-radius: 20px;
+      max-height: 300px;
+      object-fit: cover;
+    }
+    .form-section{
+      padding: 40px 20px;
+    }
+    .form-section form label {
+      text-align: center;
+    }
+    .form-section form input {
+      padding: 12px 15px 12px 50px;
+    }
+  }
+  

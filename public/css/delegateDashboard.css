@@ -1,0 +1,676 @@
+/* General styles */
+*, body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Cairo", sans-serif;
+}
+
+.container-full {
+  width: 100%;
+}
+.flex-wrap{
+  flex-wrap: wrap;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.block {
+  display: block;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.mt-70 {
+  margin-top: 70px !important;
+}
+
+/* ==================side bar section===================== */
+.sidebar {
+  background: #7766e7;
+  height: auto;
+  width: 20%;
+  padding: 30px 40px;
+  transition: right 0.3s ease;
+}
+
+.header-side {
+  padding-bottom: 100px;
+  border-bottom: 1px #ffffff solid;
+  width: auto;
+}
+
+.header-side h2 {
+  font-size: 18px;
+  color: #bdb8ea;
+  margin-right: 65px;
+  font-weight: 400;
+}
+
+.nav-menu {
+  margin-top: 40px;
+}
+
+.nav-menu li {
+  padding: 20px 40px;
+  align-items: center;
+  cursor: pointer;
+  margin: 20px 0;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.nav-menu li:hover {
+  background: #816ff6;
+  border-radius: 12px;
+}
+
+.nav-menu li img {
+  margin-left: 12px;
+}
+
+.nav-menu li a {
+  color: #ffffff;
+  font-size: 22px;
+}
+
+.nav-menu li.active {
+  background: #816ff6;
+  border-radius: 12px;
+}
+
+.notification-box {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  background-color: #198754;
+  color: white;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  font-size: 18px;
+  align-items: center;
+}
+
+/* ==================content section===================== */
+/* ==================header===================== */
+.main-content {
+  width: 80%;
+}
+
+.main-content .head {
+  padding: 40px 0px;
+  border-bottom: 1px solid #bdb8ea;
+  position: relative;
+}
+
+.main-content .head .container {
+  align-items: center;
+}
+
+.main-content .head div div {
+  padding: 10px;
+}
+
+.main-content .head div div.notification {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.main-content .head div div.notification span {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  background-color: #00cec9;
+  color: white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.main-content .head div div.notification .notification-icon {
+  width: 35px;
+  height: 35px;
+}
+
+.main-content .head div div.name-jop-title .user-name {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  color: #333;
+  margin-left: 15px;
+}
+
+/* ==================tables===================== */
+table {
+  width: 100%;
+  border: 1px solid #d0d0d0;
+  padding: 15px 0;
+  text-align: center;
+  margin: 100px 0;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-collapse: collapse;
+}
+
+caption, th, td {
+  border-bottom: 1px solid #d0d0d0;
+  padding: 30px 0;
+  font-size: 20px;
+  text-align: center;
+}
+
+th {
+  font-weight: 900;
+}
+
+td {
+  color: gray;
+  font-weight: 500;
+}
+
+caption {
+  border-collapse: collapse;
+  position: relative;
+  caption-side: top;
+  font-weight: bolder;
+}
+
+caption button {
+  position: relative;
+}
+
+td.active span {
+  padding: 5px 30px;
+  background: #198754;
+  color: #ffffff;
+  border-radius: 20px;
+}
+
+.border-bt-0 {
+  border-bottom: 0px solid !important;
+}
+
+.status-badge {
+  background: #cce5ff;
+  padding: 5px 30px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.status-delivered {
+  background: #d4edda;
+}
+
+.status-cancelled {
+  background: #f8d7da;
+}
+
+.daily-trucks button,
+.history-records button {
+  padding: 10px 25px;
+  border-radius: 12px;
+  border: 1px #6c5ce7 solid;
+  color: #6c5ce7;
+  transition: all 0.3s;
+}
+
+.daily-trucks button:hover,
+.history-records button:hover {
+  background-color: #6c5ce7;
+  color: white;
+}
+/* ======================driver information========================== */
+.truck-info > div{
+  padding: 40px;
+  width: 50%;
+}
+.truck-info div div{
+  padding: 10px 0;
+  /* width: 50%; */
+
+}
+.title-info{
+  align-items: center;
+}
+.title-info a {
+  font-size: 20px;
+  margin-left:16px ;
+}
+.title-info h2{
+  font-size: 16px;
+}
+.content-info{
+  /* border-bottom: 1px solid #D0D0D0; */
+}
+.content-info > div{
+    border-bottom: 1px solid #D0D0D0;
+    width: 100%;
+
+}
+.content-info div div{
+  /* width: 50%; */
+    border-bottom: 0;
+
+} 
+.content-info div div{
+  align-items: center;
+}
+
+.content-info div div a{
+  color: #6c5ce7;
+  font-size: 20px;
+  margin-left: 20px;
+  border-radius: 50%;
+  background: #F0EEFD;
+  padding: 2px 10px;
+}
+
+.content-info div div > div{
+  width: 100%;
+}
+.distance-ability{
+  margin-right: 150px;
+}
+.ready,.onprogress,.delivered_1{
+  padding: 5px 11px ;
+  border-radius: 12px;
+  text-align: center;
+}
+.ready,.delivered_1{
+  background: #D4EDDA;
+  color: #226131;
+}
+.onprogress{
+  background: #CCE5FF;
+  color: #004085;
+}
+
+
+
+
+
+
+@media (max-width: 992px) {
+  .truck-info > div {
+    padding: 25px;
+  }
+  .status-group {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .truck-info {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .truck-info > div {
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .item-details {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .status-group {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 480px) {
+  .truck-info > div {
+    padding: 16px;
+  }
+  
+  .title-info h2 {
+    font-size: 1rem;
+  }
+  
+  .item-row {
+    gap: 10px;
+  }
+  
+  .status-badge {
+    font-size: 0.8rem;
+    padding: 3px 10px;
+  }
+}
+
+
+
+
+/* ===================confirmation forms====================== */
+.confirmation-forms {
+  direction: rtl;
+  font-family: "Arial", sans-serif;
+  width: 100%;
+  margin: 40px auto;
+  padding: 25px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e0e0e0;
+}
+
+.confirmation-forms .title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.confirmation-forms .title h2 {
+  color: #333;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.confirmation-forms .title img {
+  width: 28px;
+  height: 28px;
+}
+
+.confirmation-forms label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #555;
+  font-size: 15px;
+}
+
+.confirmation-forms input[type="text"],
+.confirmation-forms input[type="number"],
+.confirmation-forms select,
+.confirmation-forms textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  color: #333;
+  transition: border 0.3s;
+}
+
+.confirmation-forms input[type="text"]:focus,
+.confirmation-forms input[type="number"]:focus,
+.confirmation-forms select:focus,
+.confirmation-forms textarea:focus {
+  border-color: #7766e7;
+  outline: none;
+}
+
+.confirmation-forms input[type="text"]::placeholder,
+.confirmation-forms input[type="number"]::placeholder {
+  color: #999;
+  opacity: 1;
+}
+
+.confirmation-forms textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.confirmation-forms select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: left 15px center;
+  background-size: 14px;
+  padding-right: 15px;
+}
+
+.confirmation-forms .truck-num,
+.confirmation-forms .water-amount,
+.confirmation-forms .shelter-input,
+.confirmation-forms .time-to-arrive,
+.confirmation-forms .delivered,
+.confirmation-forms .time-to-arrive {
+  width: 48%;
+}
+
+.confirmation-forms .btn-recived-isuss {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.confirmation-forms .btn-recived-isuss button {
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.confirmation-forms .btn-recived-isuss button:first-child {
+  background-color: #f8f8f8;
+  color: #dc3545;
+  border: 1px solid #dc3545;
+}
+
+.confirmation-forms .btn-recived-isuss button:first-child:hover {
+  background-color: #dc3545;
+  color: white;
+}
+
+.confirmation-forms .btn-recived-isuss button:last-child {
+  background-color: #4caf50;
+  color: white;
+  border: 1px solid #4caf50;
+}
+
+.confirmation-forms .btn-recived-isuss button:last-child:hover {
+  background-color: #3e8e41;
+}
+
+
+/* truck map ===================================== */
+
+.map-container {
+  margin: 20px 0;
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+#truck-map {
+  width: 100%;
+  z-index: 1; /* Ensures map displays properly */
+}
+
+/* Overlay for mobile menu */
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none;
+  transition: opacity 0.3s ease;
+}
+
+.overlay.active {
+  display: block;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .container {
+    width: 90%;
+  }
+  
+  table {
+    font-size: 16px;
+  }
+  
+  caption, th, td {
+    padding: 20px 10px;
+  }
+  
+  .daily-trucks button,
+  .history-records button {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 992px) {
+  .sidebar {
+    position: fixed;
+    right: -100%;
+    top: 0;
+    height: 100vh;
+    z-index: 1000;
+    width: 300px;
+  }
+  
+  .sidebar.active {
+    right: 0;
+  }
+  
+  .main-content {
+    width: 100%;
+  }
+  
+  .mobile-menu-toggle {
+    display: block;
+  }
+  
+  /* Improved table responsiveness */
+  table {
+    font-size: 14px;
+  }
+  
+  th, td {
+    padding: 15px 8px;
+  }
+  
+  td.active span,
+  .status-badge {
+    padding: 3px 15px;
+    font-size: 12px;
+  }
+  
+  /* Form adjustments */
+  .confirmation-forms .row1, 
+  .confirmation-forms .row2, 
+  .confirmation-forms .row3 {
+    flex-wrap: wrap;
+  }
+  
+  .confirmation-forms .truck-num,
+  .confirmation-forms .water-amount,
+  .confirmation-forms .shelter-input,
+  .confirmation-forms .time-to-arrive,
+  .confirmation-forms .delivered,
+  .confirmation-forms .time-to-arrive {
+    width: 48%;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Further optimize tables */
+  table {
+    font-size: 12px;
+  }
+  
+  th, td {
+    padding: 12px 5px;
+  }
+  
+  /* Stack form inputs */
+  .confirmation-forms .row1, 
+  .confirmation-forms .row2, 
+  .confirmation-forms .row3 {
+    flex-direction: column;
+  }
+  
+  .confirmation-forms .truck-num,
+  .confirmation-forms .water-amount,
+  .confirmation-forms .shelter-input,
+  .confirmation-forms .time-to-arrive,
+  .confirmation-forms .delivered,
+  .confirmation-forms .time-to-arrive {
+    width: 100%;
+  }
+  
+  /* Stack form buttons */
+  .confirmation-forms .btn-recived-isuss {
+    flex-direction: column;
+  }
+  
+  .confirmation-forms .btn-recived-isuss button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Extra small devices */
+  table {
+    font-size: 11px;
+  }
+  
+  th, td {
+    padding: 8px 3px;
+  }
+  
+  .daily-trucks button,
+  .history-records button {
+    padding: 5px 8px;
+    font-size: 11px;
+  }
+}

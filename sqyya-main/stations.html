@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="css/stationsDashboard.css" />
+  <title>لوحة تحكم المؤسسة</title>
+</head>
+
+<body>
+  <div class="container-full flex">
+    <!-- Overlay for mobile -->
+    <div class="overlay"></div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="header-side">
+        <div class="logo">
+          <img src="images/logo.png" alt="logo" />
+        </div>
+        <h2>لوحة تحكم صاحب المؤسسة</h2>
+      </div>
+      <ul class="nav-menu flex flex-column">
+        <li class="flex">
+          <img src="images/dashbordIcons/cottage.png" /><a href="org_owner_dashbord.html">الرئيسية</a>
+        </li>
+        <li class="flex active">
+          <img src="images/dashbordIcons/emergency_heat_2.png" /><a href="stations.html">محطات التحلية</a>
+        </li>
+        <li class="flex">
+          <img src="images/dashbordIcons/local_shipping.png" /><a href="trucks.html">إدارة السائقين</a>
+        </li>
+        <li class="flex">
+          <img src="images/dashbordIcons/equalizer.png" /><a href="#statistics">إحصائيات</a>
+        </li>
+        <li class="flex">
+          <img src="images/dashbordIcons/location_on.png" /><a href="#shelters">مراكز الايواء</a>
+        </li>
+        <li class="flex">
+          <img src="images/dashbordIcons/diversity_3.png" /><a href="#representatives">المندوبون</a>
+        </li>
+        <li class="flex">
+          <img src="images/dashbordIcons/draft.png" /><a href="#reports">التقارير</a>
+        </li>
+        <li class="flex">
+          <img src="images/dashbordIcons/settings.png" /><a href="#settings">الإعدادات</a>
+        </li>
+        <li class="flex mt-70">
+          <img src="images/dashbordIcons/exit_to_app.png" /><a href="#">تسجيل الخروج</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Main content -->
+    <div class="main-content">
+      <!-- Dashboard Header -->
+      <div class="dashboard-header">
+        <div class="header-content">
+          <div class="search-container">
+            <input type="text" placeholder="ابحث هنا..." />
+            <i class="fas fa-search search-icon"></i>
+          </div>
+          <div class="header-right">
+            <div class="notification-badge">
+              <i class="fas fa-bell notification-icon"></i>
+              <span class="notification-count">5</span>
+            </div>
+            <div class="user-profile">
+              <img src="images/dashbordIcons/Group 48095965.png" class="profile-image" />
+              <div class="user-info">
+                <span class="user-name">ماجد فرج</span>
+                <span class="user-role">سائق الشاحنة المياه</span>
+              </div>
+            </div>
+            <div class="mobile-menu-toggle">
+              <i class="fas fa-bars"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stations Dashboard -->
+      <div class="stations-dashboard">
+        <div class="stations-header">
+          <h1>محطات التحلية</h1>
+          <button id="showFormBtn" class="add-station-btn">
+            <i class="fas fa-plus"></i>
+            إضافة محطة جديدة
+          </button>
+        </div>
+
+        <div class="stations-table-container">
+          <table class="stations-table">
+            <thead>
+              <tr>
+                <th>اسم المحطة</th>
+                <th>الموقع</th>
+                <th>السعة اليومية</th>
+                <th>السائقون</th>
+                <th>حالة التشغيل</th>
+                <th>الإجراءات</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>محطة التحلية الشمالية</td>
+                <td>المنطقة الصناعية</td>
+                <td>10,000 لتر</td>
+                <td>محمد أحمد</td>
+                <td><span class="status active">نشطة</span></td>
+                <td>
+                  <div class="actions">
+                    <button class="edit-btn"><i class="fas fa-edit"></i></button>
+                    <button class="delete-btn"><i class="fas fa-trash"></i></button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>محطة التحلية الشمالية</td>
+                <td>المنطقة الصناعية</td>
+                <td>10,000 لتر</td>
+                <td>محمد أحمد</td>
+                <td><span class="status active">نشطة</span></td>
+                <td>
+                  <div class="actions">
+                    <button class="edit-btn"><i class="fas fa-edit"></i></button>
+                    <button class="delete-btn"><i class="fas fa-trash"></i></button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>محطة التحلية الشمالية</td>
+                <td>المنطقة الصناعية</td>
+                <td>10,000 لتر</td>
+                <td>محمد أحمد</td>
+                <td><span class="status active">نشطة</span></td>
+                <td>
+                  <div class="actions">
+                    <button class="edit-btn"><i class="fas fa-edit"></i></button>
+                    <button class="delete-btn"><i class="fas fa-trash"></i></button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>محطة التحلية الشمالية</td>
+                <td>المنطقة الصناعية</td>
+                <td>10,000 لتر</td>
+                <td>محمد أحمد</td>
+                <td><span class="status active">نشطة</span></td>
+                <td>
+                  <div class="actions">
+                    <button class="edit-btn"><i class="fas fa-edit"></i></button>
+                    <button class="delete-btn"><i class="fas fa-trash"></i></button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>محطة التحلية الشمالية</td>
+                <td>المنطقة الصناعية</td>
+                <td>10,000 لتر</td>
+                <td>محمد أحمد</td>
+                <td><span class="status active">نشطة</span></td>
+                <td>
+                  <div class="actions">
+                    <button class="edit-btn"><i class="fas fa-edit"></i></button>
+                    <button class="delete-btn"><i class="fas fa-trash"></i></button>
+                  </div>
+                </td>
+              </tr>
+              <!-- More table rows... -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Add Station Form (Hidden by default) -->
+      <div id="stationForm" class="add-station-form" style="display: none;">
+        <div class="form-header">
+          <h1><i class="fas fa-plus-circle"></i> إضافة محطة تحلية جديدة</h1>
+          <button class="back-btn">
+            <i class="fas fa-arrow-right"></i> رجوع
+          </button>
+        </div>
+
+        <form class="station-form">
+          <!-- Location Section -->
+          <div class="form-section">
+            <h2>الموقع الجغرافي</h2>
+            <div class="map-container" id="stationMap"></div>
+            <div class="coordinates">
+              <div class="input-group">
+                <label>إحداثيات الموقع الجغرافي</label>
+                <input type="text" value="24.7136° N, 46.6753° E" readonly>
+              </div>
+            </div>
+          </div>
+
+          <!-- Capacity Section -->
+          <div class="form-section">
+            <h2>السعة اليومية</h2>
+            <div class="capacity-fields">
+              <div class="input-group">
+                <label>السعة (لتر)</label>
+                <input type="number" placeholder="9994">
+              </div>
+              <div class="input-group">
+                <label>نسبة التشغيل</label>
+                <input type="number" placeholder="99" max="100">
+                <span class="percent-sign">%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Station Info Section -->
+          <div class="form-section">
+            <h2>معلومات المحطة</h2>
+            <div class="info-fields">
+              <div class="input-group">
+                <label>اسم المحطة</label>
+                <input type="text" placeholder="محطة التحلية الشمالية">
+              </div>
+              <div class="input-group">
+                <label>المحافظة</label>
+                <select>
+                  <option>الرياض</option>
+                  <option>مكة المكرمة</option>
+                  <option>المدينة المنورة</option>
+                  <option>الشرقية</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image Upload Section -->
+          <div class="form-section">
+            <h2>صورة المحطة</h2>
+            <div class="image-upload">
+              <div class="upload-container">
+                <i class="fas fa-camera"></i>
+                <p>اختر ملف</p>
+                <input type="file" id="stationImage" accept="image/*">
+              </div>
+              <div class="file-status">لم يتم اختيار ملف</div>
+            </div>
+          </div>
+
+          <!-- Form Actions -->
+          <div class="form-actions">
+            <button type="reset" class="cancel-btn">إلغاء</button>
+            <button class="submit-btn" aria-label="حفظ المحطة">حفظ المحطة</button>
+            <!-- <button type="submit" class="submit-btn">حفظ المحطة</button> -->
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS Libraries -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Sidebar toggle functionality
+      const toggle = document.querySelector(".mobile-menu-toggle");
+      const sidebar = document.querySelector(".sidebar");
+      const overlay = document.querySelector(".overlay");
+
+      toggle.addEventListener("click", () => {
+        sidebar.classList.toggle("active");
+        overlay.classList.toggle("active");
+      });
+
+      overlay.addEventListener("click", () => {
+        sidebar.classList.remove("active");
+        overlay.classList.remove("active");
+      });
+
+      // Form show/hide functionality
+      const showFormBtn = document.getElementById("showFormBtn");
+      const stationForm = document.getElementById("stationForm");
+      const cancelBtn = document.querySelector(".cancel-btn");
+      const backBtn = document.querySelector(".back-btn");
+
+      if (showFormBtn && stationForm) {
+        showFormBtn.addEventListener("click", function() {
+          stationForm.style.display = "block";
+          stationForm.scrollIntoView({ behavior: "smooth" });
+        });
+      }
+
+      if (cancelBtn) {
+        cancelBtn.addEventListener("click", function(e) {
+          e.preventDefault();
+          stationForm.style.display = "none";
+        });
+      }
+
+      if (backBtn) {
+        backBtn.addEventListener("click", function(e) {
+          e.preventDefault();
+          stationForm.style.display = "none";
+        });
+      }
+
+      // Initialize map if element exists
+      const mapElement = document.getElementById("stationMap");
+      if (mapElement) {
+        const map = L.map("stationMap").setView([24.7136, 46.6753], 12);
+        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+          maxZoom: 18,
+        }).addTo(map);
+        
+        // Add marker
+        const marker = L.marker([24.7136, 46.6753]).addTo(map);
+      }
+
+      // File upload display
+      const fileInput = document.getElementById("stationImage");
+      const fileStatus = document.querySelector(".file-status");
+      
+      if (fileInput && fileStatus) {
+        fileInput.addEventListener("change", function() {
+          if(this.files.length > 0) {
+            fileStatus.textContent = this.files[0].name;
+          } else {
+            fileStatus.textContent = 'لم يتم اختيار ملف';
+          }
+        });
+      }
+    });
+    document.addEventListener("DOMContentLoaded", function() {
+  const form = document.querySelector(".station-form");
+  const submitBtn = document.querySelector(".submit-btn");
+  const requiredInputs = form?.querySelectorAll("[required]"); // Optional chaining
+
+  // Enable/disable submit button
+  if (form && submitBtn && requiredInputs) {
+    function checkFormValidity() {
+      let isValid = true;
+      requiredInputs.forEach(input => {
+        if (!input.value.trim()) isValid = false;
+      });
+      submitBtn.disabled = !isValid;
+    }
+
+    requiredInputs.forEach(input => {
+      input.addEventListener("input", checkFormValidity);
+    });
+    checkFormValidity(); // Initial check
+  }
+
+  // Handle form submission
+  form?.addEventListener("submit", function(e) {
+    e.preventDefault();
+    if (!submitBtn.disabled) {
+      alert("تم حفظ المحطة بنجاح!");
+      // form.submit(); // Uncomment for actual submission
+    }
+  });
+});
+
+  </script>
+</body>
+</html>

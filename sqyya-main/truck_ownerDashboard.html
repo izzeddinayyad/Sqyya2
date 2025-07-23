@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="css/delegateDashboard.css" />
+    <link rel="stylesheet" href="css/truck_ownerDashboard.css" />
+          <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+    <title>صاحب الشاحنة - SqyyaAlmiyah</title>
+  </head>
+  <body>
+    <div class="container-full flex">
+
+      
+      <!-- side bar section -->
+      <div class="sidebar">
+        <div class="header-side">
+          <div class="logo">
+            <img src="images/logo.png" alt="logo" />
+          </div>
+          <h2>لوحة تحكم السائق</h2>
+        </div>
+        <ul class="nav-menu flex flex-column">
+          <li class="active flex">
+            <img src="images/dashbordIcons/cottage.png" alt="cottage" /><a
+              href="#"
+              >الرئيسية</a
+            >
+          </li>
+          <li class="flex">
+            <img
+              src="images/dashbordIcons/local_shipping.png"
+              alt="local_shipping"
+            />
+            <a href="#">مهام التوصيل</a>
+            <span class="notification-box flex justify-content-center">3</span>
+          </li>
+          <li class="flex">
+            <img src="images/dashbordIcons/assignment.png" alt="assignment" /><a
+              href="#"
+              >سجل التعبئة</a
+            >
+          </li>
+          <li class="flex">
+            <img src="images/dashbordIcons/draft.png" alt="draft" /><a href="#"
+              >الجدول الزمني</a
+            >
+          </li>
+          <li class="flex">
+            <img
+              src="images/dashbordIcons/diversity_3.png"
+              alt="diversity_3"
+            /><a href="#">ملاحظة</a>
+          </li>
+          <li class="flex">
+            <img src="images/dashbordIcons/settings.png" alt="settings" /><a
+              href="#"
+              >الاعدادات</a
+            >
+          </li>
+          <li class="flex mt-70">
+            <img
+              src="images/dashbordIcons/exit_to_app.png"
+              alt="exit_to_app"
+            /><a href="#">تسجيل الخروج</a>
+          </li>
+        </ul>
+      </div>
+      <!-- the main content section -->
+      <div class="main-content">
+        <!-- dashboard header -->
+        <div class="head">
+          <div class="flex container">
+            <div class="mobile-menu-toggle">
+               <i class="fas fa-bars"></i>
+             </div>
+            <div class="notification">
+              <span>5</span>
+              <img
+                src="images/dashbordIcons/notifications.png"
+                class="notification-icon"
+                alt="notification"
+              />
+            </div>
+            <div class="image-logo">
+              <img
+                src="images/dashbordIcons/Group 48095965.png"
+                alt="profile-picture"
+              />
+            </div>
+            <div class="name-jop-title flex flex-column">
+              <span class="user-name">ماجد فرج</span>
+              <span>سائق الشاحنة المياه</span>
+            </div>
+          </div>
+        </div>
+        <!-- dashboard content -->
+        <div class="dashboard-tables flex flex-column container space-between mt-70">
+          <h2>لوحة التحكم - السائق</h2>
+          <!-- driver information -->
+          <div class="shelter">
+            <table>
+              <caption>
+                <h3 class=" ">معلومات الشاحنة</h3>
+                <!-- <button class="">عرض الكل</button> -->
+              </caption>
+              <tr>
+                <th>رقم الشاحنة الشاحنة</th>
+                <th>المحطة التابعة</th>
+                <th>سعة الخزان</th>
+                <th>المحافظة</th>
+                <th>آخر صيانة</th>
+                <th>المسافة المقطوعة</th>
+                <th>حالة المركز</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td> #TRK-7890</td>
+                  <td>محطة التحلية الشمالية</td>
+                  <td>10:30 صباحًا</td>
+                  <td>8,000 لتر</td>
+                  <td>15/06/2023</td>
+                  <td>1,250 كم</td>
+                  <td class="active"><span>نشطة</span></td>
+                </tr>
+                <tr>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr class="border-bt-0">
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!--truck info -->
+          <div class="flex  truck-info">
+            <div class="water-info flex flex-column">
+              <div class="flex title-info">
+                <a href="#"><i class="fa-solid fa-charging-station"></i></a>
+                <h2>جدول التعبئة</h2>
+              </div>
+              <div class="content-info flex flex-wrap">
+                    <div class="flex">
+                        <div class="flex space-between">
+
+                            <a  href="#"><i class="fa-solid fa-water"></i></a>
+                            <div class="flex space-between">
+                              <div class="flex flex-wrap">
+                                <span>تعبئة الخزان</span>
+                                <span>محطة التحلية الشمالية</span>
+                            </div>
+                            <div class="distance-ability flex space-between">
+                                <span>1,250 كم</span>
+                                <span class="ready">جاهز للعمل</span>
+                            </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="flex space-between">
+
+                            <a  href="#"><i class="fa-solid fa-water"></i></a>
+                            <div class="flex space-between">
+                              <div class="flex flex-wrap">
+                                <span>تعبئة الخزان</span>
+                                <span>محطة التحلية الشمالية</span>
+                            </div>
+                            <div class="distance-ability flex space-between">
+                                <span>1,250 كم</span>
+                                <span class="ready">جاهز للعمل</span>
+                            </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+
+                    <!-- <div class="flex">
+                        <div class="flex">
+    
+                            <a  href="#"><i class="fa-solid fa-water"></i></a>
+                            <div class="flex flex-column">
+                                <span>تعبئة الخزان</span>
+                                <span>محطة التحلية الشمالية</span>
+                            </div>
+                        </div>
+                        <div>
+                            <span>1,250 كم</span>
+                            <span>جاهز للعمل</span>
+                        </div>
+                    </div> -->
+              </div>
+                
+            </div>
+            <div class="water-info flex flex-column">
+              <div class="flex title-info">
+                <a href="#"><i class="fa-solid fa-bars"></i></a>
+                <h2>مهام التوصيل</h2>
+              </div>
+              <div class="content-info flex flex-wrap">
+                    <div class="flex">
+                        <div class="flex space-between">
+
+                            <a  href="#"><i class="fa-solid fa-water"></i></a>
+                            <div class="flex space-between">
+                              <div class="flex flex-wrap">
+                                <span>توصيل إلى مركز جباليا</span>
+                                <span>5,000 لتر</span>
+                            </div>
+                            <div class="distance-ability flex space-between">
+                                <span>09:30 صباحًا</span>
+                                <span class="onprogress ">قيد التنفيذ</span>
+                            </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="flex space-between">
+
+                            <a  href="#"><i class="fa-solid fa-water"></i></a>
+                            <div class="flex space-between">
+                              <div class="flex flex-wrap">
+                                <span>توصيل إلى مركز الشاطئ</span>
+                                <span>4,500 لتر</span>
+                            </div>
+                            <div class="distance-ability flex space-between">
+                                <span>02:00 مساءً</span>
+                                <span class="delivered_1">تم التوصيل</span>
+                            </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+
+                    
+              </div>
+                
+            </div>
+
+
+
+
+          </div>
+          <!--confirmation form for receiving -->
+          <div class="confirmation-forms">
+            <form action="">
+              <div class="title">
+                <img
+                  src="images/dashbordIcons/assignment.png"
+                  alt="assignment"
+                />
+                <h2>جدول تأكيد التسليم الحاليا لتعبئة</h2>
+              </div>
+              <div class="row1 flex space-between">
+                <div class="truck-num">
+                  <label for="truck-num">رقم الشحنة</label>
+                  <input type="text" id="truck-num" placeholder="#TRK-7890" />
+                </div>
+                <div class="water-amount">
+                  <label for="water-amount">كمية المياه المتبقية</label>
+                  <input
+                    type="text"
+                    id="water-amount"
+                    placeholder="5,000 لتر"
+                  />
+                </div>
+              </div>
+              <div class="row2 flex space-between">
+                <div class="shelter-input">
+                  <label for="shelter-input">مركز الإيواء</label>
+                  <input
+                    type="text"
+                    id="shelter-input"
+                    placeholder="مركز جباليا"
+                  />
+                </div>
+                <div class="time-to-arrive">
+                  <label for="time-to-arrived">وقت الوصول</label>
+                  <input
+                    type="text"
+                    id="time-to-arrived"
+                    placeholder="09:25 صباحًا"
+                  />
+                </div>
+              </div>
+
+              <div class="row3 flex space-between">
+                <div class="delivered">
+                  <label for="delivered">كمية المياه المسلمة (لتر)</label>
+                  <input type="number" id="delivered" placeholder="" />
+                </div>
+                <div class="time-to-arrive">
+                  <label for="quality">جودة المياه</label>
+                  <select name="quality " id="quality">
+                    <option value="#1">ممتازة</option>
+                    <option value="#1">جيدة</option>
+                    <option value="#1">سيئة</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row4 flex space-between flex-column">
+                <label for="notes">ملاحظات (اختياري)</label>
+                <textarea name="notes" id="notes"></textarea>
+              </div>
+              <div class="btn-recived-isuss">
+                <button>إبلاغ عن مشكلة</button>
+                <button>تأكيد الاستلام</button>
+              </div>
+            </form>
+          </div>
+         <!-- truck map -->
+
+          <div class="map-container">
+            <div id="truck-map" style="height: 400px; border-radius: 8px;"></div>
+          </div>
+
+          <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+        </div>
+      </div>
+    </div>
+
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Initialize map centered on UAE (example coordinates)
+        const map = L.map('truck-map').setView([25.276987, 55.296249], 12);
+        
+        // Add OpenStreetMap tiles
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+        
+        // Add truck markers (example data)
+        const trucks = [
+          { id: 1, lat: 25.276987, lng: 55.296249, status: 'active', label: 'Truck 1 - Delivering' },
+          { id: 2, lat: 25.286000, lng: 55.306000, status: 'inactive', label: 'Truck 2 - Available' }
+        ];
+        
+        trucks.forEach(truck => {
+          const icon = L.divIcon({
+            html: `<div class="truck-icon ${truck.status}">🚛</div>`,
+            className: 'custom-icon'
+          });
+          
+          L.marker([truck.lat, truck.lng], { icon })
+            .addTo(map)
+            .bindPopup(truck.label);
+        });
+      });
+      document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const sidebar = document.querySelector('.sidebar');
+        const overlay = document.createElement('div');
+        overlay.className = 'overlay';
+        document.body.appendChild(overlay);
+        
+        function toggleSidebar() {
+          sidebar.classList.toggle('active');
+          overlay.classList.toggle('active');
+          
+          // Simple toggle without changing icon
+          mobileMenuToggle.classList.toggle('active');
+        }
+        
+        mobileMenuToggle.addEventListener('click', toggleSidebar);
+        overlay.addEventListener('click', toggleSidebar);
+      });
+    </script>
+  </body>
+</html>

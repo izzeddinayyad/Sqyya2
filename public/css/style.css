@@ -1,0 +1,514 @@
+/* General */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Cairo", sans-serif;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+.flex {
+  display: flex;
+}
+.divider {
+  width: 100%;
+  margin: 80px auto;
+}
+.divider h2 {
+  text-align: center;
+  font-size: 40px;
+  padding: 10px;
+  font-weight: bolder;
+}
+
+.divider img {
+  display: block;
+  margin: 0 auto;
+  /* width: auto; */
+}
+/* header section */
+header {
+  background: blueviolet;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .container div img {
+  width: auto;
+}
+header .container nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 30px;
+}
+header .container nav li a {
+  color: white;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+header .container .btn-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .container .btn-group a.register-btn {
+  color: white;
+  /* width: 45%; */
+  background: #00cec9;
+  padding: 10px 35px;
+  margin-left: 10px;
+  border-radius: 22px;
+  font-size: 16px;
+}
+header .container .btn-group a.login-btn {
+  background: #fff;
+  color: blueviolet;
+  /* width: 45%; */
+  padding: 10px 30px;
+  border-radius: 22px;
+  font-size: 16px;
+}
+header .container nav li a:hover {
+  color: #00cec9;
+  transform: translateY(-2px);
+}
+header .container .btn-group a.login-btn:hover {
+  background: transparent;
+  color: white;
+}
+header .container .btn-group a.register-btn:hover {
+  background: transparent;
+  color: #00cec9;
+}
+/* hero section */
+.hero-section {
+  /* background-image: url("../images/hero-image.jpg"); */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5)),
+    url("../images/hero-image.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 800px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  /* bg */
+  /* background-position: ; */
+}
+.hero-section .hero-content {
+  width: 50%;
+  margin: 120px auto;
+  padding: 70px 0;
+  text-align: center;
+  color: #fff;
+}
+.hero-section .hero-content h2 {
+  font-size: 50px;
+  font-weight: 800;
+}
+
+.hero-section .hero-content p {
+  width: 50%;
+  margin: 0 auto;
+}
+
+/* about section */
+.about-section {
+  /* margin-bottom: 70px; */
+  margin: 70px auto;
+}
+
+.about-section .image-section {
+  position: relative;
+  width: 50%;
+  /* width: 100%; */
+  /* margin-right:250px ; */
+  /* float: left; */
+}
+.about-section .image-section img.one {
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.about-section .image-section .two {
+  position: absolute;
+  bottom: -3%;
+  right: 45%;
+  z-index: -1;
+  width: 62.5%; /* 350/560 */
+  max-width: 350px;
+  height: auto;
+  aspect-ratio: 350/313;
+  background: #6c5ce7;
+  border-radius: 20px;
+}
+.about-section .content-section {
+  width: 50%;
+  padding-left: 30px;
+  min-width: 300px;
+}
+.about-section .content-section h3 {
+  font-size: 22px;
+  padding: 5px 0;
+}
+
+.about-section .content-section .line {
+  width: 30px;
+  height: 3px;
+  background: #6c5ce7;
+  margin-bottom: 5px;
+}
+.about-section .content-section p {
+  font-size: 20px;
+  color: #64748b;
+  margin-bottom: 10px;
+}
+
+/* service section  */
+
+.service-section .cards {
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.card {
+  width: 30%;
+  margin: 40px 0;
+  flex-direction: column;
+  padding: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+.card .image-card img {
+  width: 100%;
+}
+.card .title-card {
+  color: blueviolet;
+  font-weight: 900;
+  font-size: 35px;
+  text-align: center;
+  margin: 20px 0;
+}
+.card .dec-card {
+  text-align: center;
+  color: #64748b;
+  padding: 30px;
+  font-size: 30px;
+}
+
+/* who we are section */
+div.who-we-are-section div div h3 {
+  font-size: 40px;
+  padding: 20px 0;
+}
+div.who-we-are-section div div p {
+  font-size: 30px;
+  color: #64748b;
+  width: 50%;
+  padding: 20px 0;
+}
+div.who-we-are-section div div ul {
+  list-style: square;
+  color: #64748b;
+  margin-right: 20px;
+  padding: 20px 0;
+}
+
+ 
+/* contact us section */
+.contact-section {
+  width: 80%;
+  margin: 70px auto;
+}
+.contact-form {
+  align-items: start;
+}
+.contact-form div {
+  width: 100%;
+}
+.contact-form div form {
+  padding: 10px;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-form div form label {
+  color: blueviolet;
+  padding: 30px 0;
+  display: block;
+  font-size: 25px;
+}
+
+.contact-form div form input,
+textarea {
+  font-weight: 500;
+  width: 100%;
+  padding: 20px 12px 20px 85px;
+  width: 100%;
+  border-radius: 20px;
+  font-size: 20px;
+  border: 1px solid #777c83;
+}
+.contact-form div form .phone-email {
+  width: 100%;
+  justify-content: space-between;
+}
+.contact-form div form .phone-email .phone {
+  flex-direction: column;
+  width: 45%;
+}
+.contact-form div form .phone-email .email {
+  width: 45%;
+}
+.contact-form div form button {
+  width: 100%;
+  border-radius: 20px;
+  background: #6c5ce7;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 800;
+  padding: 25px;
+  border: 0;
+  margin-top: 20px;
+}.phone-section {
+  padding: 30px;
+}
+
+.phone-section > div {
+  padding: 30px 0;
+  margin: 25px 0;
+}
+
+.phone-section .flex {
+  display: flex;
+  align-items: flex-start; /* Align items to the top */
+}
+
+.phone-section .flex .tr {
+  display: flex;
+  flex-direction: column; /* Stack spans vertically */
+  margin-right: 20px; /* Space between text and icon */
+}
+
+.phone-section .flex .tr div {
+  display: flex;
+  flex-direction: column; /* Stack spans vertically */
+}
+
+.phone-section .flex .tr  span {
+  font-size: 24px;
+  font-weight: 200;
+  /* display: block; */
+  margin-bottom: 10px; /* Space between stacked spans */
+}
+
+.phone-section div .icons {
+  width: 48px;
+  height: 48px;
+  padding: 13px;
+  background: #00cec9;
+  border-radius: 10px;
+  margin-left: auto; /* Push icon to the right */
+}
+
+.icons img {
+  display: block;
+  width: 100%;
+}
+/* footer section */
+footer {
+  background: #6c5ce7;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 0;
+  padding: 25px;
+}
+footer h2,
+footer div,
+footer span {
+  margin: 20px;
+}
+footer div a {
+  color: aliceblue;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  /* header section */
+  header .container {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  header .container div.logo {
+    /* margin-bottom: 15px; */
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  header .container nav {
+    width: 100%;
+    margin: 15px 0;
+  }
+
+  header .container nav ul {
+    text-align: center;
+  }
+
+  header .container nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+  header .container .btn-group a.register-btn,
+  header .container .btn-group a.login-btn {
+    text-align: center;
+  }
+
+  header .container .btn-group {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 15px;
+    align-items: center;
+  }
+  header .container .btn-group .login-btn {
+    margin-top: 15px;
+    width: 50%;
+  }
+  header .container .btn-group .register-btn {
+    margin-right: 10px;
+    width: 50%;
+  }
+  /* hero section */
+  .hero-section {
+    min-height: 600px;
+    background-attachment: scroll;
+    padding: 20px;
+  }
+
+  .hero-section .hero-content {
+    padding: 50px 20px;
+    width: 95%;
+  }
+
+  .hero-section .hero-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  .hero-section .hero-content p {
+    width: 90%;
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+  .about-section {
+    display: flex;
+    flex-direction: column;
+  }
+  .about-section .flex {
+    flex-direction: column;
+  }
+  .about-section .image-section,
+  .about-section .content-section {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .about-section .content-section {
+    padding-left: 0;
+    margin-top: 40px;
+    width: 100%;
+  }
+  .about-section .image-section {
+    width: 100%;
+    /* position: relative; */
+  }
+  .about-section .content-section h3 {
+    text-align: center;
+  }
+  .about-section .image-section .about-section .image-section .two {
+    display: none;
+    right: 35%;
+    width: 50%;
+    bottom: -5%;
+  }
+
+  .about-section .divider {
+    margin: 50px auto;
+  }
+
+  .about-section .divider h2 {
+    font-size: 24px;
+  }
+  .line {
+    margin: 0 auto;
+  }
+  .about-section p {
+    text-align: center;
+  }
+  /* service section */
+  .card {
+    width: 100%;
+  }
+  /* who we are section */
+  div.who-we-are-section div div h3,
+  div.who-we-are-section div div p,
+  div.who-we-are-section div div ul {
+    text-align: center;
+    margin: 0 auto;
+  }
+  div.who-we-are-section div div ul {
+    list-style-position: inside;
+  }
+  /* contact us section */
+  .contact-section .contact-form {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  .contact-form div form label {
+    width: 120%;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  /* .phone-section div {
+    margin: 0 auto;
+    text-align: center;
+  } */
+  .phone-section {
+    padding: 25px;
+  }
+  
+  .phone-section > div {
+    padding: 25px 0;
+    margin: 20px 0;
+  }
+  
+  .phone-section .flex {
+    flex-wrap: nowrap;
+    gap: 25px;
+  }
+  
+  .phone-section .flex div span {
+    font-size: 22px;
+  }
+  
+  .phone-section div .icons {
+    width: 45px;
+    height: 45px;
+  }
+}

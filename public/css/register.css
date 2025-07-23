@@ -1,0 +1,153 @@
+/* General */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  /* @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); */
+
+  body{
+    font-family: "Cairo", sans-serif;
+  }
+  .flex {
+    display: flex;
+  }
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .login-content {
+    margin-top: 70px;
+    max-height: 752px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  .image-section {
+    width: 50%;
+  }
+  .image-section img {
+    width: 100%;
+  }
+  .form-section {
+    flex-direction: column;
+    padding-top: 80px;
+    margin: 0 auto;
+    direction: rtl;
+  }
+  .form-section h2 {
+    font-size: 28px;
+    color: black;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 500;
+  }
+  form div div {
+    margin: 10px 0;
+    flex-direction: column;
+  }
+  label{
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #353535;
+  }
+  form div div input,
+  form div div select{
+    margin-left: 10px;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 18px;
+    color: gray;
+    /* width: auto; */
+  }
+  form div div select{
+    padding-left: 105px;
+  }
+  #city{
+    padding-left: 130px;
+  }
+  .form-section form button {
+    width: 100%;
+    background-color: blueviolet;
+    color: aliceblue;
+    font-size: 20px;
+    padding: 12px;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+  }
+  .toRigesterSection {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .toRigesterSection span {
+    font-size: 18px;
+    font-weight: 800;
+  }
+  
+  .form-section div span a {
+    color: red;
+    margin-right: 5px;
+    display: inline;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+  }
+  .form-section form input:focus {
+    outline: none;
+    border-color: blueviolet;
+  }
+  
+  .form-section form button:hover {
+    background-color: rgb(14, 184, 14);
+    transition: background-color 0.3s ease;
+  }
+  .input-container input:focus {
+    border-color: blueviolet;
+    box-shadow: 0 0 0 2px rgba(138, 43, 226, 0.2);
+    outline: none;
+  }
+  @media (max-width: 768px) {
+
+  .container {
+    width: 100%;
+    padding: 0px 15px;
+  }
+  .login-content {
+    flex-direction: column;
+    overflow: visible;
+    min-height: 1000px;
+    margin-top: 30px;
+    border-radius: 0;
+  }
+  .form-section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    
+  }
+  .image-section,
+  .form-section {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .image-section img {
+    border-radius: 20px;
+    max-height: 300px;
+    object-fit: cover;
+  }
+  .form-section{
+    padding: 40px 20px;
+  }
+  .form-section form label {
+    text-align: right;
+  }
+  .form-section form input {
+    padding: 12px 15px 12px 50px;
+    width: 100%;
+  }
+}

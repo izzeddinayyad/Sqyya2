@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <link rel="stylesheet" href="css/stationsDashboard.css" />
+    <title>لوحة تحكم المؤسسة</title>
+  </head>
+
+  <body>
+    <div class="container-full flex">
+      <!-- Overlay for mobile -->
+      <div class="overlay"></div>
+
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <div class="header-side">
+          <div class="logo">
+            <img src="images/logo.png" alt="logo" />
+          </div>
+          <h2>لوحة تحكم صاحب المؤسسة</h2>
+        </div>
+        <ul class="nav-menu flex flex-column">
+          <li class="flex">
+            <img src="images/dashbordIcons/cottage.png" /><a href="org_owner_dashbord.html"
+              >الرئيسية</a
+            >
+          </li>
+          <li class="flex">
+            <img src="images/dashbordIcons/emergency_heat_2.png" /><a
+              href="stations.html"
+              >محطات التحلية</a
+            >
+          </li>
+          <li class="flex active">
+            <img src="images/dashbordIcons/local_shipping.png" /><a
+              href="trucks.html"
+              >إدارة السائقين</a
+            >
+          </li>
+          <li class="flex">
+            <img src="images/dashbordIcons/equalizer.png" /><a
+              href="#statistics"
+              >إحصائيات</a
+            >
+          </li>
+          <li class="flex">
+            <img src="images/dashbordIcons/location_on.png" /><a
+              href="#shelters"
+              >مراكز الايواء</a
+            >
+          </li>
+          <li class="flex">
+            <img src="images/dashbordIcons/diversity_3.png" /><a
+              href="#representatives"
+              >المندوبون</a
+            >
+          </li>
+          <li class="flex">
+            <img src="images/dashbordIcons/draft.png" /><a href="#reports"
+              >التقارير</a
+            >
+          </li>
+          <li class="flex">
+            <img src="images/dashbordIcons/settings.png" /><a href="#settings"
+              >الإعدادات</a
+            >
+          </li>
+          <li class="flex mt-70">
+            <img src="images/dashbordIcons/exit_to_app.png" /><a href="#"
+              >تسجيل الخروج</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <!-- Main content -->
+      <div class="main-content">
+        <!-- Dashboard Header -->
+        <div class="dashboard-header">
+          <div class="header-content">
+            <div class="search-container">
+              <input type="text" placeholder="ابحث هنا..." />
+              <i class="fas fa-search search-icon"></i>
+            </div>
+            <div class="header-right">
+              <div class="notification-badge">
+                <i class="fas fa-bell notification-icon"></i>
+                <span class="notification-count">5</span>
+              </div>
+              <div class="user-profile">
+                <img
+                  src="images/dashbordIcons/Group 48095965.png"
+                  class="profile-image"
+                />
+                <div class="user-info">
+                  <span class="user-name">ماجد فرج</span>
+                  <span class="user-role">سائق الشاحنة المياه</span>
+                </div>
+              </div>
+              <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+    
+   <div class="stations-dashboard">
+  <div class="stations-header">
+    <h1>إدارة الشاحنات</h1>
+    
+  </div>
+
+  <div class="stations-table-container">
+    <table class="stations-table">
+      <thead>
+        <tr>
+          <th>رقم الشاحنة</th>
+          <th>نوع الشاحنة</th>
+          <th>سعة الخزان</th>
+          <th>الحالة</th>
+          <th>السائق</th>
+          <th>تاريخ الصيانة</th>
+          <th>الإجراءات</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>TRK-2023-001</td>
+          <td>شاحنة مياه كبيرة</td>
+          <td>10,000 لتر</td>
+          <td><span class="status active">نشطة</span></td>
+          <td>محمد أحمد</td>
+          <td>15/03/2024</td>
+          <td>
+            <div class="actions">
+              <button class="edit-btn"><i class="fas fa-edit"></i></button>
+              <button class="delete-btn"><i class="fas fa-trash"></i></button>
+              <!-- <button class="details-btn"><i class="fas fa-eye"></i></button> -->
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>TRK-2023-002</td>
+          <td>شاحنة مياه متوسطة</td>
+          <td>6,000 لتر</td>
+          <td><span class="status maintenance">صيانة</span></td>
+          <td>علي محمود</td>
+          <td>22/02/2024</td>
+          <td>
+            <div class="actions">
+              <button class="edit-btn"><i class="fas fa-edit"></i></button>
+              <button class="delete-btn"><i class="fas fa-trash"></i></button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>TRK-2023-003</td>
+          <td>شاحنة مياه صغيرة</td>
+          <td>3,000 لتر</td>
+          <td><span class="status inactive">غير نشطة</span></td>
+          <td>-</td>
+          <td>10/01/2024</td>
+          <td>
+            <div class="actions">
+              <button class="edit-btn"><i class="fas fa-edit"></i></button>
+              <button class="delete-btn"><i class="fas fa-trash"></i></button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>TRK-2023-003</td>
+          <td>شاحنة مياه صغيرة</td>
+          <td>3,000 لتر</td>
+          <td><span class="status inactive">غير نشطة</span></td>
+          <td>-</td>
+          <td>10/01/2024</td>
+          <td>
+            <div class="actions">
+              <button class="edit-btn"><i class="fas fa-edit"></i></button>
+              <button class="delete-btn"><i class="fas fa-trash"></i></button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>TRK-2023-003</td>
+          <td>شاحنة مياه صغيرة</td>
+          <td>3,000 لتر</td>
+          <td><span class="status inactive">غير نشطة</span></td>
+          <td>-</td>
+          <td>10/01/2024</td>
+          <td>
+            <div class="actions">
+              <button class="edit-btn"><i class="fas fa-edit"></i></button>
+              <button class="delete-btn"><i class="fas fa-trash"></i></button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+      </div>
+      
+      
+    </div>
+    
+
+    <!-- JS Libraries -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Sidebar toggle functionality
+        const toggle = document.querySelector(".mobile-menu-toggle");
+        const sidebar = document.querySelector(".sidebar");
+        const overlay = document.querySelector(".overlay");
+
+        toggle.addEventListener("click", () => {
+          sidebar.classList.toggle("active");
+          overlay.classList.toggle("active");
+        });
+
+        overlay.addEventListener("click", () => {
+          sidebar.classList.remove("active");
+          overlay.classList.remove("active");
+        });
+
+        // Form show/hide functionality
+        const showFormBtn = document.getElementById("showFormBtn");
+        const stationForm = document.getElementById("stationForm");
+        const cancelBtn = document.querySelector(".cancel-btn");
+        const backBtn = document.querySelector(".back-btn");
+
+        if (showFormBtn && stationForm) {
+          showFormBtn.addEventListener("click", function () {
+            stationForm.style.display = "block";
+            stationForm.scrollIntoView({ behavior: "smooth" });
+          });
+        }
+
+        if (cancelBtn) {
+          cancelBtn.addEventListener("click", function (e) {
+            e.preventDefault();
+            stationForm.style.display = "none";
+          });
+        }
+
+        if (backBtn) {
+          backBtn.addEventListener("click", function (e) {
+            e.preventDefault();
+            stationForm.style.display = "none";
+          });
+        }
+
+        // Initialize map if element exists
+        const mapElement = document.getElementById("stationMap");
+        if (mapElement) {
+          const map = L.map("stationMap").setView([24.7136, 46.6753], 12);
+          L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+            maxZoom: 18,
+          }).addTo(map);
+
+          // Add marker
+          const marker = L.marker([24.7136, 46.6753]).addTo(map);
+        }
+
+        // File upload display
+        const fileInput = document.getElementById("stationImage");
+        const fileStatus = document.querySelector(".file-status");
+
+        if (fileInput && fileStatus) {
+          fileInput.addEventListener("change", function () {
+            if (this.files.length > 0) {
+              fileStatus.textContent = this.files[0].name;
+            } else {
+              fileStatus.textContent = "لم يتم اختيار ملف";
+            }
+          });
+        }
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector(".station-form");
+        const submitBtn = document.querySelector(".submit-btn");
+        const requiredInputs = form?.querySelectorAll("[required]"); // Optional chaining
+
+        // Enable/disable submit button
+        if (form && submitBtn && requiredInputs) {
+          function checkFormValidity() {
+            let isValid = true;
+            requiredInputs.forEach((input) => {
+              if (!input.value.trim()) isValid = false;
+            });
+            submitBtn.disabled = !isValid;
+          }
+
+          requiredInputs.forEach((input) => {
+            input.addEventListener("input", checkFormValidity);
+          });
+          checkFormValidity(); // Initial check
+        }
+
+        // Handle form submission
+        form?.addEventListener("submit", function (e) {
+          e.preventDefault();
+          if (!submitBtn.disabled) {
+            alert("تم حفظ المحطة بنجاح!");
+            // form.submit(); // Uncomment for actual submission
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
